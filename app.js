@@ -20,8 +20,6 @@ function addBookToLibrary(){
     let authorP = authorinp.value;
     newBook = new Book(titleP, authorP);
     myLibrary.push(newBook);
-    console.log(titleP);
-    console.info(myLibrary);
     createBook();
 }
 
