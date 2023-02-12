@@ -8,14 +8,17 @@ const titleinp = document.getElementById('title');
 const authorinp = document.getElementById('author');
 const container = document.querySelector('.container');
 let myLibrary = [];
+class Book {
+    constructor(titleP, authorP) {
+        title = titleP;
+        author = authorP;
+    }
 
-function Book( titleP, authorP) {
-    title = titleP;
-    author = authorP;
+
 }
 
-function addBookToLibrary(){
-    event.preventDefault();
+function addBookToLibrary() {
+    e.preventDefault();
     let titleP = titleinp.value;
     let authorP = authorinp.value;
     newBook = new Book(titleP, authorP);
@@ -25,7 +28,7 @@ function addBookToLibrary(){
 
 newButton.addEventListener('click', () => {
     console.log("3");
-    if (form.style.display === 'none'){
+    if (form.style.display === 'none') {
         form.style.display = 'block';
     }
     else {
@@ -35,7 +38,7 @@ newButton.addEventListener('click', () => {
 
 form.addEventListener('submit', addBookToLibrary);
 
-function createBook(){
+function createBook() {
     const book = document.createElement('div');
     book.classList.add("book");
     const title = document.createElement('div');
@@ -52,7 +55,7 @@ function createBook(){
     book.appendChild(xButton);
     container.appendChild(book);
     xButton.addEventListener('click', () => {
-        xButton.parentElement.remove(); 
+        xButton.parentElement.remove();
     });
 }
 
